@@ -1,14 +1,18 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+	"strings"
+)
 
 func main() {
 	var nameOne = "muchira"
 	var number int8 = 10
 	var decimal float32 = 283
 	var bigDecimal float64 = 66.09373
+	var boolean bool = false
 	nameTwo := "junior"
-	fmt.Println(nameOne, nameTwo, number, decimal, bigDecimal)
+	fmt.Println(nameOne, nameTwo, number, decimal, bigDecimal, boolean)
 
 	fmt.Println("my full name is", nameOne, nameTwo)
 
@@ -32,4 +36,9 @@ func main() {
 	scores[1] = 90
 	scores = append(scores, 88)
 	fmt.Println(scores, len(scores))
+
+	//strings
+	hello := "hellooooooo"
+	fmt.Println(strings.Contains(hello, "ll"))
+	fmt.Println(strings.ReplaceAll(hello, "o", "x"))
 }

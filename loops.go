@@ -2,7 +2,7 @@ package main
 
 import "fmt"
 
-func main() {
+func loops() {
 	x := 0
 	for x < 2 {
 		fmt.Println("value of x :", x)

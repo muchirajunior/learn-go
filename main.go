@@ -1,20 +1,36 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+	"math"
+)
+
+func sayGreenting(name string) {
+	fmt.Printf("Good morning %v \n", name)
+}
+
+func cycleNames(names []string, function func(string)) {
+	for _, value := range names {
+		function(value)
+	}
+}
+
+func areaOfCircle(radius float64) float64 {
+	return math.Pi * radius * radius
+}
 
 func main() {
-	x := 0
-	for x < 2 {
-		fmt.Println("value of x :", x)
-		x++
-	}
+	cycleNames([]string{"john", "james", "mary"}, sayGreenting)
 
-	for i := 0; i < 5; i++ {
-		fmt.Println("value of x :", i)
-	}
+	number := areaOfCircle(10)
 
-	names := []string{"john", "junior", "james"}
-	for index, value := range names {
-		fmt.Printf("%v is on index %v \n", value, index)
+	fmt.Printf("number is %v \n", number)
+
+	fmt.Println(number > 20)
+
+	if number < 20 {
+		fmt.Println("number is less than 20")
+	} else {
+		fmt.Println("number is greater than 20")
 	}
 }

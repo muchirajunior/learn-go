@@ -1,0 +1,7 @@
+
+junior : 
+pizza:                    .. $ 900 
+tomato soup:              .. $ 400 
+burger:                   .. $ 400 
+tip:                      ... $40
+total:                    ... $1700.00
